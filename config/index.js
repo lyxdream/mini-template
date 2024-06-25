@@ -12,6 +12,14 @@ const config = {
   plugins: [],
   defineConstants: {
   },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src')
+  },
+  sass: {
+    resource: [
+      path.resolve(__dirname, '..', 'src/styles/_entry.scss')
+    ]
+  },
   copy: {
     patterns: [
     ],
