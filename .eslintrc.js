@@ -1,31 +1,31 @@
 // ESLint 检查 .vue 文件需要单独配置编辑器：
 // https://eslint.vuejs.org/user-guide/#editor-integrations
 module.exports = {
-  "root": true,
-  "env": {
-    "browser": true,
-    "node": true,
-    "es2021": true
+  root: true,
+  env: {
+    browser: true,
+    node: true,
+    es2021: true
   },
-  "globals": {},
-  "parser": "vue-eslint-parser", //解析 Vue 单文件组件
-  "parserOptions": {
-    "parser": "@babel/eslint-parser", // JavaScript 代码所使用的解析器
-    "ecmaVersion": 2021, // ECMAScript 语法版本
-    "sourceType": "module", //模块系统的类型
-    "ecmaFeatures": {
-      "jsx": true //用了 JSX 语法的支持
+  globals: {},
+  parser: "vue-eslint-parser", //解析 Vue 单文件组件
+  parserOptions: {
+    parser: "@babel/eslint-parser", // JavaScript 代码所使用的解析器
+    ecmaVersion: 2021, // ECMAScript 语法版本
+    sourceType: "module", //模块系统的类型
+    ecmaFeatures: {
+      jsx: true //用了 JSX 语法的支持
     }
   },
-  "extends": [
+  extends: [
     "taro/vue3",
     "eslint:recommended", // 包含ESLint推荐的基本规则
     "plugin:vue/vue3-essential" // 为Vue3提供基础校验规则
   ],
-  "plugins": [
+  plugins: [
     "vue" // 确保已经注册了vue插件
   ],
-  "rules": {
+  rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     "vue/attribute-hyphenation": ["error"], //DOM 属性使用短横线命名（kebab-case）
