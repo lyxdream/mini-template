@@ -1,9 +1,10 @@
 // ESLint 检查 .vue 文件需要单独配置编辑器：
 // https://eslint.vuejs.org/user-guide/#editor-integrations
-{
+module.exports = {
   "root": true,
   "env": {
     "browser": true,
+    "node": true,
     "es2021": true
   },
   "globals": {},
@@ -25,8 +26,8 @@
     "vue" // 确保已经注册了vue插件
   ],
   "rules": {
-    // "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    // 'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "no-debugger": process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     "vue/attribute-hyphenation": ["error"], //DOM 属性使用短横线命名（kebab-case）
     "vue/html-indent": [
       "error",
