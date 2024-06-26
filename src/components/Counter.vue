@@ -1,12 +1,13 @@
 <template>
   <view>
     <text class="title">{{ counter.count }}</text>
-    <view class="button" @tap="onAdd">ADD</view>
+    <view class="button"
+          @tap="onAdd">ADD</view>
   </view>
 </template>
 
 <script>
-import { useCounterStore } from '../stores/counter'
+import { useCounterStore } from '../stores/index'
 
 export default {
   setup() {
@@ -14,12 +15,6 @@ export default {
 
     const onAdd = () => {
       counter.count++
-
-      // with autocompletion ✨
-      // counter.$patch({count: counter.count + 1})
-
-      // or using an action instead
-      // counter.increment()
     }
 
     return {

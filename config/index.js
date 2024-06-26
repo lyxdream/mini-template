@@ -1,3 +1,4 @@
+const path = require('path')
 const config = {
   projectName: 'miniapp-template',
   date: '2024-6-24',
