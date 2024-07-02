@@ -7,7 +7,9 @@ module.exports = {
     node: true,
     es2021: true
   },
-  globals: {},
+  globals: {
+    API_HOST: true,
+  },
   parser: "vue-eslint-parser", //解析 Vue 单文件组件
   parserOptions: {
     parser: "@babel/eslint-parser", // JavaScript 代码所使用的解析器

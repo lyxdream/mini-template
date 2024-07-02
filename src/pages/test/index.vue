@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import './index.scss'
 import Counter from '../../components/Counter.vue'
 
 export default {

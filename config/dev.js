@@ -1,10 +1,39 @@
+
+// const API_HOST = '"xxx"'
+const TerserPlugin = require('terser-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 module.exports = {
   env: {
     NODE_ENV: '"development"'
   },
   defineConstants: {
+    // API_HOST
   },
-  mini: {},
+  plugins: [
+  ],
+  mini: {
+    webpackChain: (chain) => {
+      chain.plugin('analyzer').use(BundleAnalyzerPlugin),
+      chain.merge({
+        plugin: {
+          // 解决包体积过大无法进行预览的问题
+          terse: {
+            plugin: TerserPlugin,
+            args: [
+              {
+                test: /\.js(\?.*)?$/i,
+                minify: TerserPlugin.swcMinify,
+                terserOptions: {
+                  compress: true,
+                  sourceMap: true, 
+                },
+              }
+            ]
+          }
+        }
+      })
+    }
+  },
   h5: {
      /**
      * 如果h5端编译后体积过大，可以使用webpack-bundle-analyzer插件对打包体积进行分析。
@@ -27,3 +56,6 @@ module.exports = {
     }
   }
 }
+
+
+

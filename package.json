@@ -21,7 +21,7 @@
     "build:qq": "taro build --type qq",
     "build:quickapp": "taro build --type quickapp",
     "prod:weapp": "cross-env NODE_ENV=production npm run build:weapp -- --watch",
-    "build:dev:weapp": "cross-env NODE_ENV=development npm run build:weapp",
+    "dev:build:weapp": "cross-env NODE_ENV=development taro build --type weapp",
     "dev:weapp": "cross-env NODE_ENV=development npm run build:weapp -- --watch",
     "dev:swan": "npm run build:swan -- --watch",
     "dev:alipay": "npm run build:alipay -- --watch",
@@ -55,8 +55,8 @@
     "@tarojs/shared": "3.6.32",
     "@tarojs/taro": "3.6.32",
     "cross-env": "^7.0.3",
-    "pinia": "^2.0.10",
-    "vue": "^3.2.24"
+    "pinia": "2.0.10",
+    "vue": "3.2.24"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
@@ -81,6 +81,7 @@
     "postcss": "^8.4.18",
     "style-loader": "1.3.0",
     "stylelint": "9.3.0",
+    "terser-webpack-plugin": "^5.1.3",
     "ts-node": "^10.9.1",
     "typescript": "^4.1.0",
     "vue-loader": "^17.0.0",
