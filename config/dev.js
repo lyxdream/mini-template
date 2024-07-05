@@ -23,6 +23,7 @@ module.exports = {
               {
                 test: /\.js(\?.*)?$/i,
                 minify: TerserPlugin.swcMinify,
+                parallel: true,
                 terserOptions: {
                   compress: true,
                   sourceMap: true, 

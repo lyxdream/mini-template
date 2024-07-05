@@ -1,5 +1,4 @@
 const path = require('path')
-// const TerserPlugin = require("terser-webpack-plugin")
 const config = {
   projectName: 'miniapp-template',
   date: '2024-6-24',
@@ -54,12 +53,10 @@ const config = {
         }
       })
     },
-    
     postcss: {
       pxtransform: {
         enable: true,
         config: {
-
         }
       },
       url: {
