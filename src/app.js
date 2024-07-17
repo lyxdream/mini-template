@@ -18,7 +18,6 @@ const App = createApp({
 })
 
 App.use(createPinia())
-console.log(useAppStore(),'==useAppStore()')
 
 // 获取小程序当前场景值
 useAppStore().getAppScene()
