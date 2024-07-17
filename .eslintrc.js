@@ -21,8 +21,7 @@ module.exports = {
   extends: [
     "taro/vue3",
     "eslint:recommended", // 包含ESLint推荐的基本规则
-    "plugin:vue/vue3-recommended",// 这个预设建立在vue3-essential的基础上，包含了更多关于代码风格和最佳实践的建议性规则
-    "@vue/standard",//使代码风格一致，减少人为的编码风格差异。
+    "plugin:vue/vue3-recommended"// 这个预设建立在vue3-essential的基础上，包含了更多关于代码风格和最佳实践的建议性规则
   ],
   plugins: [
     "vue" // 确保已经注册了vue插件
