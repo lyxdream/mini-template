@@ -1,11 +1,10 @@
-// ESLint 检查 .vue 文件需要单独配置编辑器：
 // https://eslint.vuejs.org/user-guide/#editor-integrations
 module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true,
-    es2021: true
+    es2021: true,
+    node: true
   },
   globals: {
     API_HOST: true,
@@ -22,7 +21,7 @@ module.exports = {
   extends: [
     "taro/vue3",
     "eslint:recommended", // 包含ESLint推荐的基本规则
-    "plugin:vue/vue3-essential" // 为Vue3提供基础校验规则
+    "plugin:vue/vue3-recommended"// 这个预设建立在vue3-essential的基础上，包含了更多关于代码风格和最佳实践的建议性规则
   ],
   plugins: [
     "vue" // 确保已经注册了vue插件
@@ -33,17 +32,14 @@ module.exports = {
     "vue/attribute-hyphenation": ["error"], //DOM 属性使用短横线命名（kebab-case）
     'vue/html-closing-bracket-newline': ['error', { multiline: 'never' }], //这个规则控制 Vue 模板中的 HTML 标签闭合括号（>）的位置。multiline 设置为 'never' 表示不允许将闭合括号放到新的一行，
     'vue/html-closing-bracket-spacing': ['error'],// 控制 Vue 模板中的 HTML 标签闭合括号前后的空格。
-    "vue/html-indent": [
-      "error",
-      2,
-      {
-        "attribute": 1
-      }
-    ], //控制 HTML 代码缩进。['error', 2] 表示每层缩进使用 2 个空格
+    "indent": ["error", 2],
+    'vue/html-indent': ['error', 2, {
+      attribute: 1
+    }], //控制 HTML 代码缩进。['error', 2] 表示每层缩进使用 2 个空格
     "vue/html-quotes": ["error", "double"], //  HTML 属性值使用双引号
     "vue/max-attributes-per-line": ["error", {
       "singleline": {
-        "max": 1
+        "max": 2,
       },      
       "multiline": {
         "max": 1

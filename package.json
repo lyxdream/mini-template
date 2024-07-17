@@ -44,7 +44,6 @@
     "@tarojs/components": "3.6.32",
     "@tarojs/helper": "3.6.32",
     "@tarojs/plugin-framework-vue3": "3.6.32",
-
     "@tarojs/plugin-platform-alipay": "3.6.32",
     "@tarojs/plugin-platform-h5": "3.6.32",
     "@tarojs/plugin-platform-jd": "3.6.32",
@@ -60,13 +59,14 @@
     "vue": "3.2.24"
   },
   "devDependencies": {
-    "@babel/core": "7.8.0",
+    "@babel/core": "^7.8.0",
+    "@babel/eslint-parser": "^7.24.8",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@tarojs/cli": "3.6.32",
+    "@tarojs/plugin-html": "^3.6.34",
     "@tarojs/taro-loader": "3.6.32",
     "@tarojs/webpack5-runner": "3.6.32",
-   "@tarojs/plugin-html": "^3.6.34",
     "@types/node": "^18.15.11",
     "@types/webpack-env": "1.13.6",
     "@vue/babel-plugin-jsx": "1.0.6",
