@@ -1,12 +1,5 @@
-import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', {
-  state: () => {
-    return { count: 0 }
-  },
-  actions: {
-    increment() {
-      this.count++
-    },
-  },
-})
+import useAppStore from './modules/app'
+import useNavStore from './modules/nav'
+
+export { useAppStore,useNavStore }

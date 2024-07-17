@@ -45,7 +45,7 @@ const config = {
               include: [/pinia/],
               use: {
                 babelLoader: {
-                  loader: require.resolve('babel-loader')
+                  loader: require.resolve('babel-loader'),
                 }
               }
             }
